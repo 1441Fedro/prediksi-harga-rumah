@@ -37,5 +37,5 @@ if st.button("Predict"):
     rentang_bawah = prediksi
     rentang_atas1 = prediksi + 279049479
     rentang_atas2 = prediksi + 153810900
-    st.write(f"Hasil prediksi memiliki rentang harga (rmse): Rp {rentang_bawah:.0f} - Rp {rentang_atas1:.0f}")
-    st.write(f"Hasil prediksi memiliki rentang harga (mae): Rp {rentang_bawah:.0f} - Rp {rentang_atas2:.0f}")
+    st.write(f"Hasil prediksi memiliki rentang harga (rmse): Rp {rentang_bawah:,.0f}.replace(',', '.') - Rp {rentang_atas1:,.0f}.replace(',', '.')")
+    st.write(f"Hasil prediksi memiliki rentang harga (mae): Rp {rentang_bawah:,.0f}.replace(',', '.') - Rp {rentang_atas2:,.0f}.replace(',', '.')")
