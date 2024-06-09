@@ -36,8 +36,8 @@ if st.button("Predict"):
     prediksi = regresi(kt,km,p,lt,lb)
     # harga prediksi rumah
     rentang_bawah = prediksi
-    rentang_atas1 = prediksi + 279049479
-    rentang_atas2 = prediksi + 153810900
+    rentang_atas1 = prediksi + 146147347
+    rentang_atas2 = prediksi + 107943023
 
     # mengubah ke int
     rentang_bawah_int = int(rentang_bawah)
