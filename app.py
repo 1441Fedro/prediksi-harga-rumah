@@ -42,7 +42,7 @@ if st.button("Predict"):
     # mengubah ke int
     rentang_bawah_int = int(rentang_bawah)
     rentang_atas1_int = int(rentang_atas1)
-    rentang_atas2_int = int(rentang_bawah)
+    rentang_atas2_int = int(rentang_atas2)
 
     # menambah titik pemisah
     rentang_bawah_format = f"{rentang_bawah_int:,}".replace(',', '.')
