@@ -36,18 +36,14 @@ if st.button("Predict"):
     prediksi = regresi(kt,km,p,lt,lb)
     # harga prediksi rumah
     rentang_bawah = prediksi
-    rentang_atas1 = prediksi + 146147347
-    rentang_atas2 = prediksi + 107943023
+    rentang_atas = prediksi + 146147347
 
     # mengubah ke int
     rentang_bawah_int = int(rentang_bawah)
-    rentang_atas1_int = int(rentang_atas1)
-    rentang_atas2_int = int(rentang_atas2)
+    rentang_atas_int = int(rentang_atas)
 
     # menambah titik pemisah
     rentang_bawah_format = f"{rentang_bawah_int:,}".replace(',', '.')
-    rentang_atas1_format = f"{rentang_atas1_int:,}".replace(',', '.')
-    rentang_atas2_format = f"{rentang_atas2_int:,}".replace(',', '.')
+    rentang_atas_format = f"{rentang_atas_int:,}".replace(',', '.')
 
-    st.write(f"Hasil prediksi memiliki rentang harga (rmse): Rp {rentang_bawah_format} - Rp {rentang_atas1_format}")
-    st.write(f"Hasil prediksi memiliki rentang harga (mae): Rp {rentang_bawah_format} - Rp {rentang_atas2_format}")
+    st.write(f"Hasil prediksi memiliki rentang harga (rmse): Rp {rentang_bawah_format} - Rp {rentang_atas_format}")
