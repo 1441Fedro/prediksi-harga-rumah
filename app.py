@@ -26,24 +26,25 @@ def regresi(kt,km,p,lt,lb):
 # Streamlit app
 st.header("Prediksi Harga Rumah di Kota Bekasi",anchor=None,divider='blue')
 st.write("Masukkan kriteria yang anda inginkan:")
-kt = st.slider("Jumlah Kamar Tidur", 0, 10, 0)
-km = st.slider("Jumlah Kamar Mandi", 0, 10, 0)
-p = st.slider("Kapasitas Parkir Mobil", 0, 10, 0)
-lt = st.slider("Luas Tanah", 0, 200, 0)
-lb = st.slider("Luas Bangunan", 0, 200, 0)
+kt = st.number_input("Jumlah Kamar Tidur", 0, 10, 0)
+km = st.number_input("Jumlah Kamar Mandi", 0, 10, 0)
+p = st.number_input("Kapasitas Parkir Mobil", 0, 10, 0)
+lt = st.number_input("Luas Tanah", 0, 200, 0)
+lb = st.number_input("Luas Bangunan", 0, 200, 0)
 
 if st.button("Predict"):
     prediksi = regresi(kt,km,p,lt,lb)
     # harga prediksi rumah
     rentang_bawah = prediksi
-    rentang_atas = prediksi + 146147347
+    rentang_atas1 = prediksi + 144846019
 
     # mengubah ke int
     rentang_bawah_int = int(rentang_bawah)
-    rentang_atas_int = int(rentang_atas)
+    rentang_atas1_int = int(rentang_atas1)
 
     # menambah titik pemisah
     rentang_bawah_format = f"{rentang_bawah_int:,}".replace(',', '.')
-    rentang_atas_format = f"{rentang_atas_int:,}".replace(',', '.')
+    rentang_atas1_format = f"{rentang_atas1_int:,}".replace(',', '.')
 
-    st.write(f"Hasil prediksi memiliki rentang harga (rmse): Rp {rentang_bawah_format} - Rp {rentang_atas_format}")
+    st.markdown("### Hasil prediksi memiliki rentang harga (RMSE): ")
+    st.markdown(f"### :blue-background[Rp {rentang_bawah_format} - Rp {rentang_atas1_format}] ")
