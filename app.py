@@ -26,11 +26,11 @@ def regresi(kt,km,p,lt,lb):
 # Streamlit app
 st.header("Prediksi Harga Rumah di Kota Bekasi",anchor=None,divider='blue')
 st.write("Masukkan kriteria yang anda inginkan:")
-kt = st.number_input("Jumlah Kamar Tidur", 0, 10, 0)
-km = st.number_input("Jumlah Kamar Mandi", 0, 10, 0)
-p = st.number_input("Kapasitas Parkir Mobil", 0, 10, 0)
-lt = st.number_input("Luas Tanah", 0, 200, 0)
-lb = st.number_input("Luas Bangunan", 0, 200, 0)
+kt = st.number_input("Masukkan Jumlah Kamar Tidur Antara 0 sampai 10", 0, 10, 0)
+km = st.number_input("Masukkan Jumlah Kamar Mandi Antara 0 sampai 10", 0, 10, 0)
+p = st.number_input("Masukkan Kapasitas Parkir Mobil Antara 0 sampai 10", 0, 10, 0)
+lt = st.number_input("Masukkan Luas Tanah Antara 0 sampai 200", 0, 200, 0)
+lb = st.number_input("Masukkan Luas Bangunan Antara 0 sampai 200", 0, 200, 0)
 
 if st.button("Predict"):
     prediksi = regresi(kt,km,p,lt,lb)
